@@ -28,19 +28,19 @@ You must have installed [node.js](https://nodejs.org), [Git]((https://git-scm.co
     
   - if it is not installed, you must download and install the software from [the official Git website](https://git-scm.com/downloads)
 
-- For Gitbook Cligitbook
+- For Gitbook Cli (command line tools)
   - To check if Gitbook-Cli is installed, you may execute:
     ```
     $ gitbook -V
     ```
 
-  - If it is not installed, you must install the package using npm as an administrator
+  - If it is not installed, you must install the package using ``npm`` as an administrator
   
     ```
     $ npm install -g gitbook-cli
     ```
     
-  - In linux or mac, you may use ``sudo``to set the user for the ``.npm`` folder and install the package
+  - In linux or mac, you may use ``sudo``to set the user and the path for the ``.npm`` folder and install the package
   
     ```
     $ export PATH=$PATH:$HOME/.npm-packages/bin
@@ -51,48 +51,51 @@ You must have installed [node.js](https://nodejs.org), [Git]((https://git-scm.co
 
 ## How to install it ?
 
-To deploy the book in a Github-Pages website, you must change the URL for the repository in the ``package.json`` file.
+If you want to edit the book using the [Gitbook Editor](https://www.gitbook.com/editor), you only need to clone the repository. 
+You may create a new book in the editor using the resulting Git repository.
 
-- Check the name of the repository in the Github.
-- Replace the name of the repository. By default, it is "noname/noname.git"
+To deploy the book in a [Github-Pages website](https://pages.github.com/), you must change the URL for the repository in the ``package.json`` file.
+
+- Check the URL of the repository in the Github.
+- Replace the URL of the repository. By default, it is "noname/noname.git"
 
 ## How to run it ?
 
 The project includes a set of commands that can be used to automate part of the process.
 
-- To install or update the Gitbook plugins, if required.
+- **To install or update the Gitbook plugins**
 
   ```
-  $ npm book:prepare
+  $ npm run book:prepare
   ```
 
-- To preview the book. It runs a webserver where you can review the book while you are writing. Any change in the book is displayed immediately.
+- **To preview the book.** It runs a webserver where you can review the book while you are writing. Any change in the book is displayed immediately.
 
   ```
-  $ npm book:watch
+  $ npm run book:watch
   ```
 
-- To create the book (in Windows)
+- **To create the book** (in Windows)
 
   ```
-  $ npm book:build
+  $ npm run book:build
   ```
 
-- To publish the book in a Github-Pages website (in Windows)
+- **To publish the book in a Github-Pages website** (in Windows)
 
   ```
-  $ npm book:publish
+  $ npm run book:publish
   ```
 
-- To create the book (in Linux)
+- **To create the book** (in Linux)
 
   ```
-  $ npm book:build-linux
+  $ npm run book:build-linux
   ```
 
-- To publish the book in a Github-Pages website (in Linux)
+- **To publish the book in a Github-Pages website** (in Linux)
 
   ```
-  $ npm book:publish-linux
+  $ npm run book:publish-linux
   ```
 
